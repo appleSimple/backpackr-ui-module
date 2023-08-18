@@ -41,7 +41,7 @@ export default {
     background-color: #8a8a8a;
 
     &.fill {
-      background-color: rgb(255, 255, 0);
+      background-color: rgb(255, 179, 0);
     }
   }
 }
