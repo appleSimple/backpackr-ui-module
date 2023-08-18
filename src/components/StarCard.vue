@@ -1,7 +1,9 @@
 <template>
-  <DefaultCard>
-    <StarScore :card-name="'starCard'" :score="score" />
-    <slot />
+  <DefaultCard :img-url="imgUrl">
+    <div class="slot">
+      <StarScore :card-name="'starCard'" :score="score" />
+      <slot />
+    </div>
   </DefaultCard>
 </template>
 
@@ -16,7 +18,18 @@ export default {
     StarScore
   },
   props: {
-    score: String
+    score: String,
+    imgUrl: {
+      type: String,
+      default: ''
+    }
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.slot {
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+</style>
