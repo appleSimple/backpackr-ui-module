@@ -25,7 +25,7 @@ export default {
 
 <style scoped lang="scss">
 .card-wrapper {
-  width: calc(100% - 10px);
+  width: 100%;
   margin-bottom: 10px;
   margin-right: 10px;
   border: 1px solid grey;

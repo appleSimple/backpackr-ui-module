@@ -65,17 +65,27 @@ export default {
 
     .card-bottom {
       display: flex;
-      height: 20px;
+      flex-direction: column;
+      height: auto;
       line-height: 20px;
+
+      @include small {
+        flex-direction: row;
+        height: 20px;
+      }
 
       span {
         &::before {
           content: '';
-          display: inline-block;
+          display: none;
           width: 1px;
           height: 14px;
           margin: 0 10px;
           background-color: grey;
+
+          @include small {
+            display: inline-block;
+          }
         }
       }
     }
