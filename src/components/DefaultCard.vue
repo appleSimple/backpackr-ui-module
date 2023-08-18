@@ -1,7 +1,6 @@
 <template>
   <article class="card-wrapper">
-    <figure :style="{ backgroundImage : `url(${imgUrl})` }" class="thumbnail">
-    </figure>
+    <figure :style="{ backgroundImage : `url(${imgUrl})` }" class="thumbnail"></figure>
     <figCaption>
       <div class="card-label">Card Label</div>
       <div class="card-title">Card Title</div>
@@ -26,7 +25,8 @@ export default {
 
 <style scoped lang="scss">
 .card-wrapper {
-  width: calc(20% - 10px);
+  width: calc(100% - 10px);
+  margin-bottom: 10px;
   margin-right: 10px;
   border: 1px solid grey;
   border-bottom: 0;
@@ -36,6 +36,14 @@ export default {
 
   display: flex;
   flex-direction: column;
+
+  @include small {
+    width: calc(50% - 10px);
+  }
+  
+  @include large {
+    width: calc(20% - 10px);
+  }
   
   figure {
     width: 100%;
