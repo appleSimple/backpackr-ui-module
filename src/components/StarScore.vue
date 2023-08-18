@@ -32,6 +32,8 @@ export default {
 
 <style scoped lang="scss">
 .star-score-wrapper {
+  line-height: 17px;
+  height: 17px;
   .star { 
     width: 15px;
     height: 15px;
