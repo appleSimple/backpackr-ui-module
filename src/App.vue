@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <section class="card-section">
-      <DefaultCard/>
-      <StarCard score="2" />
-      <StarDescriptCard score="4" />
-      <DefaultCard/>
+      <DefaultCard :img-url="require('@/assets/js.png')"/>
+      <StarCard :img-url="require('@/assets/js.png')" score="2" />
+      <StarDescriptCard :img-url="require('@/assets/js.png')" score="4" />
+      <HorizonCard/>
     </section>
   </div>
 </template>
@@ -13,13 +13,15 @@
 import DefaultCard from './components/DefaultCard.vue'
 import StarCard from './components/StarCard.vue';
 import StarDescriptCard from './components/StarDescriptCard.vue';
+import HorizonCard from './components/HorizonCard.vue';
 
 export default {
   name: 'App',
   components: {
     DefaultCard,
     StarCard,
-    StarDescriptCard
+    StarDescriptCard,
+    HorizonCard
 }
 }
 </script>
@@ -36,7 +38,5 @@ export default {
 
 .card-section {
   width: 100%;
-  display: flex;
-  gap: 10px;
 }
 </style>
