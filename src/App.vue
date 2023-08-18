@@ -4,7 +4,7 @@
       <DefaultCard :img-url="require('@/assets/js.png')"/>
       <StarCard :img-url="require('@/assets/js.png')" score="2" />
       <StarDescriptCard :img-url="require('@/assets/js.png')" score="4" />
-      <HorizonCard/>
+      <HorizonCard :img-url="require('@/assets/js.png')" score="5" />
     </section>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
