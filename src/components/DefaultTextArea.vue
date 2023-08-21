@@ -9,26 +9,30 @@
       :readonly="readonly"
       :disabled="disabled"
     ></textarea>
-    <span class="text-conter">{{ textConter }}</span>
+    <span class="text-conter">{{ textCounter }}</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: "DefaultTextArea",
+  name: 'DefaultTextArea',
+  model: {
+    prop: 'value',
+    event: 'changeValue',
+  },
   props: {
     value: {
       type: String,
-      default: "",
+      default: '',
     },
     id: {
       type: String,
-      default: "",
+      default: '',
       required: true,
     },
     placeholder: {
       type: String,
-      default: "",
+      default: '',
       required: false,
     },
     readonly: {
@@ -42,17 +46,18 @@ export default {
   },
   data() {
     return {
-      textConter: 500
-    }
+      defaultLength: 500,
+    };
+  },
+  computed: {
+    textCounter: function () {
+      return this.defaultLength - this.value.length;
+    },
   },
   methods: {
     controlInputEvent(event) {
-      this.countText(event.target.value);
-      this.$emit("controlInputEvent", event);
+      this.$emit('controlInputEvent', event);
     },
-    countText(value) {
-      this.textConter = this.textConter - value.length;
-    }
   },
 };
 </script>
@@ -66,7 +71,9 @@ export default {
   textarea {
     width: 100%;
     height: 100%;
-  
+    padding: 0;
+    box-sizing: border-box;
+
     // 아래 순서 변경 금지 (style 오버라이드)
     &:read-only {
       color: grey;
@@ -77,12 +84,11 @@ export default {
   }
   .text-conter {
     position: absolute;
-    right: 10px;
+    right: 22px;
     bottom: 4px;
 
     font-size: 10px;
     color: grey;
   }
 }
-
 </style>
