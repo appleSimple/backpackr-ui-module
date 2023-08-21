@@ -2,7 +2,7 @@
   <div id="app">
     <section class="card-section">
       <h2>카드 UI</h2>
-      <DefaultCard :img-url="require('@/assets/js.png')"/>
+      <DefaultCard :img-url="require('@/assets/js.png')" />
       <StarCard :img-url="require('@/assets/js.png')" score="2" />
       <StarDescriptCard :img-url="require('@/assets/js.png')" score="4" />
       <HorizonCard :img-url="require('@/assets/js.png')" score="5" />
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import DefaultCard from './components/DefaultCard.vue'
+import DefaultCard from './components/DefaultCard.vue';
 import StarCard from './components/StarCard.vue';
 import StarDescriptCard from './components/StarDescriptCard.vue';
 import HorizonCard from './components/HorizonCard.vue';
@@ -28,9 +28,9 @@ export default {
     StarCard,
     StarDescriptCard,
     HorizonCard,
-    TextArea
-}
-}
+    TextArea,
+  },
+};
 </script>
 
 <style lang="scss">
