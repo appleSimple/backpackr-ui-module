@@ -73,6 +73,7 @@ export default {
     height: 100%;
     padding: 0;
     box-sizing: border-box;
+    resize: none;
 
     // 아래 순서 변경 금지 (style 오버라이드)
     &:read-only {
