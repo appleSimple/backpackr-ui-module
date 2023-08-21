@@ -1,7 +1,11 @@
 <template>
   <div class="star-score-wrapper">
-    <template v-for="(star ,index) in 5">
-      <span :key="`${cardName}-star-${index}`" class="star" :class="{ 'fill' : fillStars(index) }"></span>
+    <template v-for="(star, index) in 5">
+      <span
+        :key="`${cardName}-star-${index}`"
+        class="star"
+        :class="{ fill: fillStars(index) }"
+      ></span>
     </template>
   </div>
 </template>
@@ -12,12 +16,12 @@ export default {
   props: {
     cardName: {
       type: String,
-      default: ''
+      default: '',
     },
     score: {
       type: String,
-      default: '0'
-    }
+      default: '0',
+    },
   },
   methods: {
     fillStars(index) {
@@ -25,16 +29,16 @@ export default {
       if (_index <= Number(this.score)) {
         return true;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
 .star-score-wrapper {
   line-height: 17px;
   height: 17px;
-  .star { 
+  .star {
     width: 15px;
     height: 15px;
     display: inline-block;

@@ -1,6 +1,9 @@
 <template>
   <article class="card-wrapper">
-    <figure :style="{ backgroundImage : `url(${imgUrl})` }" class="thumbnail"></figure>
+    <figure
+      :style="{ backgroundImage: `url(${imgUrl})` }"
+      class="thumbnail"
+    ></figure>
     <figCaption>
       <div class="card-title">Lorem Ipsum is simply dummy text</div>
       <div class="card-contents">
@@ -15,16 +18,16 @@
 </template>
 
 <script>
-import StarScore from "./StarScore.vue";
+import StarScore from './StarScore.vue';
 
 export default {
-  name: "HorizonCard",
+  name: 'HorizonCard',
   components: { StarScore },
   props: {
     score: String,
     imgUrl: {
       type: String,
-      default: "",
+      default: '',
     },
   },
 };

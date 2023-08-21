@@ -8,22 +8,22 @@
 </template>
 
 <script>
-import DefaultCard from './DefaultCard.vue'
-import StarScore from './StarScore.vue'
+import DefaultCard from './DefaultCard.vue';
+import StarScore from './StarScore.vue';
 
 export default {
-  name: "StarDescriptCard",
+  name: 'StarDescriptCard',
   components: {
     DefaultCard,
-    StarScore
+    StarScore,
   },
   props: {
     score: String,
     imgUrl: {
       type: String,
-      default: ''
-    }
-  }
+      default: '',
+    },
+  },
 };
 </script>
 

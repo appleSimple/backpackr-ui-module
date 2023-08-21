@@ -1,6 +1,9 @@
 <template>
   <article class="card-wrapper">
-    <figure :style="{ backgroundImage : `url(${imgUrl})` }" class="thumbnail"></figure>
+    <figure
+      :style="{ backgroundImage: `url(${imgUrl})` }"
+      class="thumbnail"
+    ></figure>
     <figCaption>
       <div class="card-label">Card Label</div>
       <div class="card-title">Card Title</div>
@@ -17,10 +20,10 @@ export default {
   props: {
     imgUrl: {
       type: String,
-      default: ''
-    }
-  }
-}
+      default: '',
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -30,7 +33,7 @@ export default {
   margin-right: 10px;
   border: 1px solid grey;
   border-bottom: 0;
-  
+
   float: left;
   box-sizing: border-box;
 
@@ -40,11 +43,11 @@ export default {
   @include small {
     width: calc(50% - 10px);
   }
-  
+
   @include large {
     width: calc(20% - 10px);
   }
-  
+
   figure {
     width: 100%;
     height: 140px;
@@ -52,7 +55,7 @@ export default {
     background-size: cover;
     background-position: center;
   }
-  
+
   figCaption {
     text-align: left;
     background-color: #e5e5e5;
